@@ -1,0 +1,22 @@
+{
+  "name": "@my-project/shared",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.0.0",
+    "react": "^19.0.0"
+  },
+  "dependencies": {
+    "react": "^19.0.0"
+  }
+}

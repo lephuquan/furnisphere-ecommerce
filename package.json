@@ -1,0 +1,12 @@
+{
+  "name": "furnisphere-ecommerce",
+  "version": "1.0.0",
+  "scripts": {
+    "dev:client": "cd client && npm run dev",
+    "dev:admin": "cd admin && npm run dev",
+    "build:client": "cd client && npm run build",
+    "build:admin": "cd admin && npm run build",
+    "preview:client": "cd client && npm run preview",
+    "preview:admin": "cd admin && npm run preview"
+  }
+}

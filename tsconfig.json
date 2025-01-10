@@ -15,5 +15,5 @@
     "isolatedModules": true,
     "noEmit": true
   },
-  "include": ["src"]
-}
+  "include": ["src", "client/src/components/common/Header/CategoryNav.tsx", "client/src/components/common/Header/Header.tsx", "client/src/components/common/Header/MainNav.tsx", "client/src/components/common/Header/TopNav.tsx", "client/src/styles/variables.ts"]
+} 

@@ -4,7 +4,7 @@ import { LogoIcon, SearchIcon } from '../../icons';
 
 const MainNav: React.FC = () => {
   return (
-    <div className="border-b border-gray-200 px-5 py-4">
+    <div className="px-5 py-4">
       <div className="container mx-auto flex items-center justify-between">
         <div className="max-w-md flex-1">
           <div className="relative">
@@ -28,7 +28,7 @@ const MainNav: React.FC = () => {
             <span className="border-b-2 border-transparent font-helvetica text-sm text-[#222] hover:border-gray-500">
               Orders
             </span>
-            <span className='text-sm" border-b-2 border-transparent'>&</span>
+            <span className="border-b-2 border-transparent text-sm">&</span>
             <span className="border-b-2 border-transparent font-helvetica text-sm text-[#222] hover:border-gray-500">
               Sign In
             </span>

@@ -3,7 +3,7 @@ import React from 'react';
 const TopNav: React.FC = () => {
   return (
     <div className="bg-[rgb(255,255,255)] px-5 py-2">
-      <div className="container mx-auto flex items-center justify-between border-b border-[#8C8989]">
+      <div className="container mx-auto flex items-center justify-between border-b border-gray-300">
         <div className="flex gap-5">
           <a
             href="/"

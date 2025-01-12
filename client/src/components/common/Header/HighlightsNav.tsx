@@ -4,10 +4,10 @@ import NavDropdown from './NavDropdown';
 interface NavItem {
   label: string;
   sections?: {
-    title: string;
-    items: string[];
+    title?: string;
+    items?: string[];
   }[];
-  image?: string;
+  dropdownImage?: string;
 }
 
 const navItems: NavItem[] = [
@@ -58,62 +58,72 @@ const navItems: NavItem[] = [
         ],
       },
     ],
-    image: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241219_Sofa_NEW?wid=478&qlt=60&op_sharpen=1',
+    dropdownImage:
+      'https://cb.scene7.com/is/image/Crate/cb_dFO_20241219_Sofa_NEW?wid=478&qlt=60&op_sharpen=1',
   },
   {
     label: 'Wedding Registry',
     sections: [
       {
-        title: 'Top New Categories',
-        items: ['Spring 2025 New Arrivals', 'Sofas & Sectionals', 'Dining Tables', 'Wine Glasses'],
+        title: 'The Wedding Registry',
+        items: ['Get Started', 'Create a Registry', 'Find a Registry', 'Manage My Registry'],
       },
       {
-        title: 'Trending',
-        items: ['Best Sellers', 'New Arrivals', 'Passport to Italy', 'The Spring Style Edit'],
+        title: 'Tips & Advice',
+        items: [
+          'Most-Loved Gifts',
+          'FREE Gifts & Perks',
+          'Real Registries',
+          'One-Click Registries',
+          'Registry Checklist',
+          'Find Your Tabletop Style',
+          'Most Forgotten Registry Items',
+          'Private Registry Events',
+          'FREE Design Services',
+          'Wedding Registry Guides',
+          'Refer a Friend, Get $100',
+        ],
       },
       {
-        title: 'Collabs',
-        items: ['Athena Calderone', 'Gaby Dalkin', 'Laura Kim', 'Leanne Ford'],
+        title: 'Top Categories',
+        items: [
+          'Kitchen Appliances & Electrics',
+          'Cookware',
+          'Dinnerware',
+          'Kitchen Tools & Accessories',
+          'Flatware',
+          'Cutlery',
+          'Bakeware',
+          'Serveware',
+          'Drinkware & Bar Tools',
+          'Bedding',
+          'Bath',
+          'Table Linens',
+          'Decor',
+          'Shop All',
+        ],
       },
     ],
+    dropdownImage: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241024_Monogramming',
   },
   {
     label: 'Free Design Services',
-    sections: [
-      /* Add relevant sections */
-    ],
   },
   {
     label: 'Trade Program',
-    sections: [
-      /* Add relevant sections */
-    ],
   },
   {
     label: 'In-Stock',
-    sections: [
-      /* Add relevant sections */
-    ],
   },
   {
     label: 'Best Sellers',
-    sections: [
-      /* Add relevant sections */
-    ],
   },
   {
     label: 'Lunar New Year',
-    sections: [
-      /* Add relevant sections */
-    ],
   },
   {
     label: "Valentine's Day",
-    sections: [
-      /* Add relevant sections */
-    ],
   },
-  // ... Add other nav items with their respective sections
 ];
 
 const HighlightsNav: React.FC = () => {
@@ -131,7 +141,9 @@ const HighlightsNav: React.FC = () => {
                   {item.label.toUpperCase()}
                 </div>
               </a>
-              {item.sections && <NavDropdown sections={item.sections} image={item.image} />}
+              {item.sections && (
+                <NavDropdown sections={item.sections} dropdownImage={item.dropdownImage} />
+              )}
             </li>
           ))}
         </ul>

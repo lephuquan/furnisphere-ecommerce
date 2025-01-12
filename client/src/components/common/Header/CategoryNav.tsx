@@ -2,7 +2,7 @@ import React from 'react';
 
 const CategoryNav: React.FC = () => {
   return (
-    <nav className="border-b border-gray-200 bg-[#222]">
+    <nav className="bg-[#222]">
       <div className="container mx-auto">
         <ul className="flex justify-center">
           {[
@@ -26,7 +26,7 @@ const CategoryNav: React.FC = () => {
                 className="block px-5 py-2"
               >
                 <div
-                  className={`border-b-2 border-transparent pb-1 text-sm font-medium ${item === 'SALE' ? 'text-red-500' : 'text-white'} hover:border-white`}
+                  className={`border-b-2 border-transparent py-1 text-sm font-medium ${item === 'SALE' ? 'text-red-500' : 'text-white'} hover:border-white`}
                 >
                   {item}
                 </div>

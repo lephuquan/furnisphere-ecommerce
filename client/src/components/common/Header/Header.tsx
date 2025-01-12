@@ -12,6 +12,7 @@ const Header: React.FC = () => {
       <MainNav />
       <HighlightsNav />
       <CategoryNav />
+      <HotDealsNav/>
     </header>
   );
 };

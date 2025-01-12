@@ -25,11 +25,11 @@ const MainNav: React.FC = () => {
 
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-1">
-            <span className="border-b-2 border-transparent font-helvetica text-sm text-[#222] hover:border-gray-500">
+            <span className="border-b-2 border-transparent font-helvetica text-sm text-[#222] hover:border-gray-500 cursor-pointer">
               Orders
             </span>
             <span className="border-b-2 border-transparent text-sm">&</span>
-            <span className="border-b-2 border-transparent font-helvetica text-sm text-[#222] hover:border-gray-500">
+            <span className="border-b-2 border-transparent font-helvetica text-sm text-[#222] hover:border-gray-500 cursor-pointer">
               Sign In
             </span>
           </div>

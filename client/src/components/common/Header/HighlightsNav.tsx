@@ -7,7 +7,11 @@ interface NavItem {
     title?: string;
     items?: string[];
   }[];
-  dropdownImage?: string;
+  dropdownImage?: {
+    src: string;
+    alt: string;
+    description: string;
+  };
 }
 
 const navItems: NavItem[] = [
@@ -58,9 +62,13 @@ const navItems: NavItem[] = [
         ],
       },
     ],
-    dropdownImage:
-      'https://cb.scene7.com/is/image/Crate/cb_dFO_20241219_Sofa_NEW?wid=478&qlt=60&op_sharpen=1',
-  },
+      dropdownImage: {
+        src: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241219_Sofa_NEW?wid=478&qlt=60&op_sharpen=1',
+        alt: '1500+ New Spring Arrivals',
+        description: '1500+ New Spring Arrivals',
+      },
+  
+    },
   {
     label: 'Wedding Registry',
     sections: [
@@ -104,7 +112,11 @@ const navItems: NavItem[] = [
         ],
       },
     ],
-    dropdownImage: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241024_Monogramming',
+    dropdownImage: {
+      src: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241024_Monogramming',
+      alt: 'New! Personalize Gifts On Your Registry',
+      description: 'New! Personalize Gifts On Your Registry',
+    },
   },
   {
     label: 'Free Design Services',

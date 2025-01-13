@@ -3,12 +3,20 @@ import React from 'react';
 interface NavSection {
   title?: string;
   items?: string[];
-  image?: string;
+  dropdownImage?: {
+    src: string,
+    alt: string,
+    description: string,
+  },
 }
 
 interface NavDropdownProps {
   sections: NavSection[];
-  dropdownImage?: string;
+  dropdownImage?: {
+    src: string,
+    alt: string,
+    description: string,
+  },
 }
 
 const NavDropdown: React.FC<NavDropdownProps> = ({ sections, dropdownImage }) => {
@@ -35,8 +43,8 @@ const NavDropdown: React.FC<NavDropdownProps> = ({ sections, dropdownImage }) =>
             </div>
           ))}
           <div className="col-span-1 my-[2rem] w-[20rem]">
-            <img src={dropdownImage} alt="sub menu image" />
-            <p className="font-helvetica text-sm font-semibold">1500+ New Spring Arrivals</p>
+            <img src={dropdownImage?.src} alt={dropdownImage?.alt} />
+            <p className="font-helvetica text-sm font-semibold mt-[1rem]">{dropdownImage?.description}</p>
           </div>
         </div>
       </div>

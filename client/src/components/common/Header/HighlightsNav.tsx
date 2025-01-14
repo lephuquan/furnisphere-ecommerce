@@ -1,8 +1,9 @@
 import React from 'react';
-import NavDropdown from './NavDropdown';
+import NavDropdown from './HighlightsDropdown';
 
 interface NavItem {
   label: string;
+  link: string;
   sections?: {
     title?: string;
     items?: string[];
@@ -17,6 +18,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   {
     label: 'New!',
+    link: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241024_Monogramming',
     sections: [
       {
         title: 'Top New Categories',
@@ -62,15 +64,15 @@ const navItems: NavItem[] = [
         ],
       },
     ],
-      dropdownImage: {
-        src: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241219_Sofa_NEW?wid=478&qlt=60&op_sharpen=1',
-        alt: '1500+ New Spring Arrivals',
-        description: '1500+ New Spring Arrivals',
-      },
-  
+    dropdownImage: {
+      src: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241219_Sofa_NEW?wid=478&qlt=60&op_sharpen=1',
+      alt: '1500+ New Spring Arrivals',
+      description: '1500+ New Spring Arrivals',
     },
+  },
   {
     label: 'Wedding Registry',
+    link: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241024_Monogramming',
     sections: [
       {
         title: 'The Wedding Registry',
@@ -120,27 +122,33 @@ const navItems: NavItem[] = [
   },
   {
     label: 'Free Design Services',
+    link: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241024_Monogramming',
   },
   {
     label: 'Trade Program',
+    link: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241024_Monogramming',
   },
   {
     label: 'In-Stock',
+    link: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241024_Monogramming',
   },
   {
     label: 'Best Sellers',
+    link: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241024_Monogramming',
   },
   {
     label: 'Lunar New Year',
+    link: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241024_Monogramming',
   },
   {
     label: "Valentine's Day",
+    link: 'https://cb.scene7.com/is/image/Crate/cb_dFO_20241024_Monogramming',
   },
 ];
 
 const HighlightsNav: React.FC = () => {
   return (
-    <nav className="relative bg-white">
+    <nav className="relative my-[10px] bg-white">
       <div className="container mx-auto">
         <ul className="flex justify-center">
           {navItems.map((item) => (

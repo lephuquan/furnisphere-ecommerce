@@ -19,9 +19,9 @@ interface NavDropdownProps {
   },
 }
 
-const NavDropdown: React.FC<NavDropdownProps> = ({ sections, dropdownImage }) => {
+const HighlightsDropdown: React.FC<NavDropdownProps> = ({ sections, dropdownImage }) => {
   return (
-    <div className="invisible absolute left-1/2 w-4/5 -translate-x-1/2 border border-[#ccc] bg-white opacity-0 shadow-lg transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100">
+    <div className="invisible absolute left-1/2 w-4/5 -translate-x-1/2 border border-[#ccc] bg-white opacity-0 shadow-lg transition-all duration-100 ease-in-out group-hover:visible group-hover:opacity-100 z-10">
       <div className="mx-[5rem]">
         <div className="flex justify-center gap-[2rem]">
           {sections.map((section) => (
@@ -52,4 +52,4 @@ const NavDropdown: React.FC<NavDropdownProps> = ({ sections, dropdownImage }) =>
   );
 };
 
-export default NavDropdown;
+export default HighlightsDropdown;

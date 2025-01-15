@@ -7,12 +7,12 @@ import HotDealsNav from './HotDealsNav';
 
 const Header: React.FC = () => {
   return (
-    <header className="sticky top-0 z-50 w-full bg-white">
-      <TopNav />
+    <header className="flex flex-col sticky top-0 z-50 w-full bg-white">
+      <HotDealsNav className="order-first lg:order-last" />
+      <TopNav className="hidden lg:block"/>
       <MainNav />
-      <HighlightsNav />
-      <CategoryNav />
-      <HotDealsNav/>
+      {/* <HighlightsNav className="hidden md:block" />
+      <CategoryNav className="hidden md:block"/> */}
     </header>
   );
 };

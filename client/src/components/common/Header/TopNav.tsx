@@ -1,8 +1,12 @@
 import React from 'react';
 
-const TopNav: React.FC = () => {
+interface TopNavProps {
+  className?: string;
+}
+
+const TopNav: React.FC<TopNavProps> = ({ className }) => {
   return (
-    <div className="bg-[rgb(255,255,255)] px-5 py-2">
+    <div className={`${className} bg-[rgb(255,255,255)] px-5 py-2`}>
       <div className="container mx-auto flex items-center justify-between border-b border-gray-300">
         <div className="flex gap-5">
           <a

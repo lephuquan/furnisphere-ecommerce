@@ -885,9 +885,13 @@ const navItems: NavItem[] = [
   },
 ];
 
-const CategoryNav = () => {
+interface CategoryNavProps {
+  className?: string;
+}
+
+const CategoryNav: React.FC<CategoryNavProps> = ({ className }) => {
   return (
-    <nav className="relative bg-[#222]">
+    <nav className={`relative bg-[#222] ${className}`}>
       <div className="container mx-auto">
         <ul className="flex justify-center">
           {navItems.map((item) => (

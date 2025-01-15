@@ -1,39 +1,50 @@
 import React from 'react';
 import { ChevronDoubleRight } from '../../icons';
 
-const HotDealsNav = () => {
+interface HotDealsNavProps {
+  className?: string;
+}
+
+const HotDealsNav: React.FC<HotDealsNavProps> = ({ className }) => {
   return (
-    <nav className="h-14 bg-[#485164]">
-      <div className="container mx-auto h-full items-center">
-        <ul className="flex h-full items-center justify-between text-sm font-medium text-white">
-          <li className="flex-1 items-center border-r-2 border-white leading-3 cursor-pointer">
-            <div className="flex items-center justify-center gap-3">
-              <div className="flex flex-col items-center">
-                <p>Up to 60% off Warehouse Sale</p>
-                <p>Final Weekend!</p>
+    <nav className={`${className} h-14 w-full bg-[#485164]`}>
+      <div className="h-full w-full items-center lg:mx-auto">
+        <ul className="flex h-full w-full items-center justify-start overflow-x-auto whitespace-nowrap text-sm font-medium text-white md:justify-between">
+          <li className="mx-2 flex-none cursor-pointer items-center justify-center border-r-2 border-white px-2 leading-3 md:flex md:h-1/2 md:flex-1">
+            <div className="flex h-full items-center justify-center gap-2">
+              <div className="flex h-full flex-col items-center justify-center">
+                <a href="/">
+                  <p>Up to 60% off Warehouse Sale</p>
+                  <p>Final Weekend!</p>
+                </a>
               </div>
               <ChevronDoubleRight className="size-4" />
             </div>
           </li>
-          <li className="flex-1 items-center border-r-2 border-white leading-3 cursor-pointer">
-            <div className="flex items-center justify-center gap-3">
-              <div className="flex flex-col items-center">
-                <p>1500+ New Spring Arrivals</p>
+
+          <li className="mx-2 flex-none cursor-pointer items-center justify-center border-r-2 border-white px-2 leading-3 md:flex md:h-1/2 md:flex-1">
+            <div className="flex h-full items-center justify-center gap-2">
+              <div className="flex h-full flex-col items-center justify-center">
+                <a href="/">
+                  <p>1500+ New Spring Arrivals</p>
+                </a>
               </div>
               <ChevronDoubleRight className="size-4" />
             </div>
           </li>
-          <li className="flex-1 items-center border-r-2 border-white leading-3 cursor-pointer">
-            <div className="flex items-center justify-center gap-3">
-              <div className="flex flex-col items-center">
-                <p>Win a $20,000 Honeymoon Getaway</p>
+          <li className="mx-2 flex-none cursor-pointer items-center justify-center border-r-2 border-white px-2 leading-3 md:flex md:h-1/2 md:flex-1">
+            <div className="flex h-full items-center justify-center gap-2">
+              <div className="flex h-full flex-col items-center justify-center">
+                <a href="/">
+                  <p>Win a $20,000 Honeymoon Getaway</p>
+                </a>
               </div>
               <ChevronDoubleRight className="size-4" />
             </div>
           </li>
-          <li className="flex-1 items-center leading-3 cursor-pointer">
-            <div className="flex items-center justify-center gap-3">
-              <div className="flex flex-col items-center">
+          <li className="x-2 flex-none cursor-pointer items-center justify-center border-r-2 border-white px-2 leading-3 md:flex md:h-1/2 md:flex-1">
+            <div className="flex h-full items-center justify-center gap-2">
+              <div className="flex h-full flex-col items-center justify-center">
                 <p>Up to 20% off Bedding + Ships Free</p>
                 <p>Final Weekend!</p>
               </div>

@@ -15,6 +15,10 @@ interface NavItem {
   };
 }
 
+interface HighlightsNavProps {
+  className?: string;
+}
+
 const navItems: NavItem[] = [
   {
     label: 'New!',
@@ -146,9 +150,9 @@ const navItems: NavItem[] = [
   },
 ];
 
-const HighlightsNav: React.FC = () => {
+const HighlightsNav: React.FC<HighlightsNavProps> = ({ className }) => {
   return (
-    <nav className="relative my-[10px] bg-white">
+    <nav className={`relative my-[10px] bg-white ${className}`}>
       <div className="container mx-auto">
         <ul className="flex justify-center">
           {navItems.map((item) => (

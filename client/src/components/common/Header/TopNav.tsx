@@ -7,11 +7,11 @@ interface TopNavProps {
 const TopNav: React.FC<TopNavProps> = ({ className }) => {
   return (
     <div className={`${className} bg-[rgb(255,255,255)] px-5 py-2`}>
-      <div className="container mx-auto flex items-center justify-between border-b border-gray-300">
+      <div className="mx-auto flex items-center justify-between border-b border-gray-300">
         <div className="flex gap-5">
           <a
             href="/"
-            className="border-b-4 border-[#000] pb-2 font-helvetica text-sm font-bold text-[#8C8989] text-black"
+            className="flex items-center justify-center border-b-4 border-[#000] pb-2 font-helvetica text-sm font-bold text-[#8C8989] text-black"
           >
             Furni&Sphere
           </a>
@@ -27,7 +27,7 @@ const TopNav: React.FC<TopNavProps> = ({ className }) => {
           >
             CB2
           </a>
-          <div className="border-b-4 border-transparent pb-2 font-helvetica text-sm font-bold text-[#8C8989] hover:border-[#000] hover:text-black">
+          <div className="flex items-center border-b-4 border-transparent pb-2 font-helvetica text-sm font-bold text-[#8C8989] hover:border-[#000] hover:text-black">
             <a href="/hudson" className="border-r border-[#8C8989] pr-1">
               HUDSON
             </a>
@@ -35,11 +35,11 @@ const TopNav: React.FC<TopNavProps> = ({ className }) => {
               GRACE
             </a>
           </div>
-          <div className="border-b-4 border-transparent hover:border-[#000]">
+          <div className="border-b-4 mb-2 border-transparent hover:border-[#000]">
             <img
               src="https://images.crateandbarrel.com/is/image/Crate/flag_US"
               alt="US"
-              className="h-auto w-6"
+              className="h-4 w-6"
             />
           </div>
         </div>

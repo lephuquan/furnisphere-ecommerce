@@ -11,8 +11,8 @@ const Header: React.FC = () => {
       <HotDealsNav className="order-first lg:order-last" />
       <TopNav className="hidden lg:block"/>
       <MainNav />
-      {/* <HighlightsNav className="hidden md:block" />
-      <CategoryNav className="hidden md:block"/> */}
+      <HighlightsNav className="hidden md:block" />
+      <CategoryNav className="hidden md:block"/>
     </header>
   );
 };

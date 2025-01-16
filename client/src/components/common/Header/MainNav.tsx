@@ -59,26 +59,28 @@ const MainNav: React.FC = () => {
       </div>
 
       {/* Mobile MainNav */}
-      <div className="flex items-center justify-between px-5 py-4 lg:hidden">
-        <div className="flex flex-1 items-center justify-start gap-2">
+      <div className="flex w-full items-center justify-between px-2 py-4 lg:hidden">
+        <div className="flex w-full flex-1 items-center justify-start gap-1 ">
           <div className="h-full items-center gap-2">
             <NavbarMo />
           </div>
           <div className="h-full items-center gap-2">
-            <button className="flex h-11 w-auto items-center gap-2 border-b-4 border-transparent pb-1 hover:border-[#222]">
-              <FaMapMarkerAlt className="h-7 w-7" />
+            <button className="flex h-11 w-auto ml-1 items-center gap-2 border-b-4 border-transparent pb-1 hover:border-[#222]">
+              <FaMapMarkerAlt className="h-6 w-6 lg:h-10 lg:w-10 my-auto mt-2" />
             </button>
           </div>
         </div>
-        <div className="flex flex-1 items-center justify-center gap-2">
-          <LogoIcon className="h-10" />
+        <div className="flex w-full flex-2 items-center justify-center gap-1 ">
+          <div className="flex items-center justify-center">
+          <LogoIcon className="h-10 w-full" />
+          </div>
         </div>
-        <div className="flex flex-1 items-center justify-end gap-2">
-          <button className="mr-4 h-11 w-auto items-center gap-2 border-b-4 border-transparent pb-1 hover:border-[#222]">
-            <FaUser className="h-7 w-7" />
+        <div className="flex w-full flex-1 items-center justify-end gap-1">
+          <button className="mr-3 h-11 w-auto items-center gap-2 border-b-4 border-transparent pb-1 hover:border-[#222]">
+            <FaUser className="h-6 w-6 lg:h-10 lg:w-10" />
           </button>
-          <button className="mr-4 h-11 w-auto items-center gap-2 border-b-4 border-transparent pb-1 hover:border-[#222]">
-            <FaShoppingCart className="h-7 w-7" />
+          <button className="mr-2 h-11 w-auto items-center gap-2 border-b-4 border-transparent pb-1 hover:border-[#222]">
+            <FaShoppingCart className="h-6 w-6 lg:h-10 lg:w-10" />
           </button>
         </div>
       </div>
@@ -87,7 +89,7 @@ const MainNav: React.FC = () => {
           <input
             type="text"
             placeholder="What can we help you find?"
-            className="w-full h-12 rounded-md border border-gray-500 px-4 py-2 pr-10 focus:border-gray-500 focus:outline-none"
+            className="h-12 w-full rounded-md border border-gray-500 px-4 py-2 pr-10 focus:border-gray-500 focus:outline-none"
           />
           <div className="absolute inset-y-0 right-0 flex items-center pr-3">
             <SearchIcon className="h-7 w-7 text-gray-500" />

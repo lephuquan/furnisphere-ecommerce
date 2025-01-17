@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDoubleRight } from '../../icons';
+import { ChevronDoubleRight } from './icons';
 
 interface HotDealsNavProps {
   className?: string;

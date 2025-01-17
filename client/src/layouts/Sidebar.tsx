@@ -1,12 +1,14 @@
 import React from 'react';
 import { FaUser, FaMapMarkerAlt, FaHeart, FaShoppingCart } from 'react-icons/fa';
-import { LogoIcon, SearchIcon } from '../../icons';
-import MobileNav from './MobileNav';
+import { LogoIcon, SearchIcon } from '../components/icons';
+import MobileNav from '../components/MobileNav';
+import HighlightsNav from '../components/HighlightsNav';
+import CategoryNav from '../components/CategoryNav';
 
-const MainNav: React.FC = () => {
+const Sidebar: React.FC = () => {
   return (
     <>
-      {/* PC MainNav */}
+      {/* PC Sidebar */}
       <div className="hidden px-5 py-4 lg:block">
         <div className="mx-auto flex items-center justify-between">
           <div className="max-w-md flex-1">
@@ -57,22 +59,24 @@ const MainNav: React.FC = () => {
           </div>
         </div>
       </div>
+      <HighlightsNav className="hidden lg:block" />
+      <CategoryNav className="hidden lg:block" />
 
-      {/* Mobile MainNav */}
+      {/* Mobile Sidebar */}
       <div className="flex w-full items-center justify-between px-2 py-4 lg:hidden">
-        <div className="flex w-full flex-1 items-center justify-start gap-1 ">
+        <div className="flex w-full flex-1 items-center justify-start gap-1">
           <div className="h-full items-center gap-2">
             <MobileNav />
           </div>
           <div className="h-full items-center gap-2">
-            <button className="flex h-11 w-auto ml-1 items-center gap-2 border-b-4 border-transparent pb-1 hover:border-[#222]">
-              <FaMapMarkerAlt className="h-6 w-6 lg:h-10 lg:w-10 my-auto mt-2" />
+            <button className="ml-1 flex h-11 w-auto items-center gap-2 border-b-4 border-transparent pb-1 hover:border-[#222]">
+              <FaMapMarkerAlt className="my-auto mt-2 h-6 w-6 lg:h-10 lg:w-10" />
             </button>
           </div>
         </div>
-        <div className="flex w-full flex-2 items-center justify-center gap-1 ">
+        <div className="flex-2 flex w-full items-center justify-center gap-1">
           <div className="flex items-center justify-center">
-          <LogoIcon className="h-10 w-full" />
+            <LogoIcon className="h-10 w-full" />
           </div>
         </div>
         <div className="flex w-full flex-1 items-center justify-end gap-1">
@@ -100,4 +104,4 @@ const MainNav: React.FC = () => {
   );
 };
 
-export default MainNav;
+export default Sidebar;

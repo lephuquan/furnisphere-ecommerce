@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaUser, FaMapMarkerAlt, FaHeart, FaShoppingCart } from 'react-icons/fa';
 import { LogoIcon, SearchIcon } from '../../icons';
-import NavbarMo from './NavbarMo';
+import MobileNav from './MobileNav';
 
 const MainNav: React.FC = () => {
   return (
@@ -62,7 +62,7 @@ const MainNav: React.FC = () => {
       <div className="flex w-full items-center justify-between px-2 py-4 lg:hidden">
         <div className="flex w-full flex-1 items-center justify-start gap-1 ">
           <div className="h-full items-center gap-2">
-            <NavbarMo />
+            <MobileNav />
           </div>
           <div className="h-full items-center gap-2">
             <button className="flex h-11 w-auto ml-1 items-center gap-2 border-b-4 border-transparent pb-1 hover:border-[#222]">

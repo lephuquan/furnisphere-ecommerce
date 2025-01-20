@@ -20,7 +20,7 @@ interface CategoryDropdownProps {
 
 const CategoryDropdown: React.FC<CategoryDropdownProps> = ({ sections, dropdownImage }) => {
   return (
-    <div className="invisible absolute left-1/2 w-[70rem] -translate-x-1/2 transform border border-[#ccc] bg-white opacity-0 shadow-lg transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100 max-h-[25rem] overflow-y-scroll ">
+    <div className="invisible absolute left-1/2 w-4/5 -translate-x-1/2 transform border border-[#ccc] bg-white opacity-0 shadow-lg transition-all duration-300 ease-in-out group-hover:visible group-hover:opacity-100 max-h-[25rem] overflow-y-scroll ">
       <div className="mx-[2rem] max-w-7xl px-4 py-8">
         <div className="flex justify-center">
           <div className="columns-4">

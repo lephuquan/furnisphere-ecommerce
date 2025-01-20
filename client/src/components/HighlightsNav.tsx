@@ -1,5 +1,5 @@
 import React from 'react';
-import NavDropdown from './HighlightsDropdown';
+import HighlightsDropdown from './HighlightsDropdown';
 
 interface NavItem {
   label: string;
@@ -166,7 +166,7 @@ const HighlightsNav: React.FC<HighlightsNavProps> = ({ className }) => {
                 </div>
               </a>
               {item.sections && (
-                <NavDropdown sections={item.sections} dropdownImage={item.dropdownImage} />
+                <HighlightsDropdown sections={item.sections} dropdownImage={item.dropdownImage} />
               )}
             </li>
           ))}

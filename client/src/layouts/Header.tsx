@@ -5,7 +5,7 @@ import Sidebar from './Sidebar';
 
 const Header: React.FC = () => {
   return (
-    <header className="sticky top-0 z-50 flex w-full flex-col bg-white">
+    <header className="flex w-full flex-col bg-white">
       <HotDealsNav className="order-first lg:order-last" />
       <TopNav className="hidden lg:block" />
       <Sidebar />

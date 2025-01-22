@@ -16,7 +16,15 @@ export default {
         },
         dark: '#222',
       },
-      
+      keyframes: {
+        blink: {
+          '0%, 100%': { opacity: 0 }, 
+          '50%': { opacity: 1 },
+        },
+      },
+      animation: {
+        blink: 'blink 1.5s infinite',
+      },
     },
   },
   plugins: [],

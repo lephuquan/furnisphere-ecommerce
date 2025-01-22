@@ -5,3 +5,4 @@ export { default as NavbarsIcon } from './NavbarsIcon';
 export { default as CancelIcon } from './CancelIcon';
 export { default as MinusIcon } from './MinusIcon';
 export { default as PlusIcon } from './PlusIcon';
+export { default as BulletPointIcon } from './BulletPointIcon';

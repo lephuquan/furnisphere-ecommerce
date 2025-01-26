@@ -1,5 +1,5 @@
 import React from 'react';
-import NavDropdown from './HighlightsDropdown';
+import HighlightsDropdown from './HighlightsDropdown';
 
 interface NavItem {
   label: string;
@@ -13,6 +13,10 @@ interface NavItem {
     alt: string;
     description: string;
   };
+}
+
+interface HighlightsNavProps {
+  className?: string;
 }
 
 const navItems: NavItem[] = [
@@ -146,9 +150,9 @@ const navItems: NavItem[] = [
   },
 ];
 
-const HighlightsNav: React.FC = () => {
+const HighlightsNav: React.FC<HighlightsNavProps> = ({ className }) => {
   return (
-    <nav className="relative my-[10px] bg-white">
+    <nav className={`relative my-[10px] bg-white ${className}`}>
       <div className="container mx-auto">
         <ul className="flex justify-center">
           {navItems.map((item) => (
@@ -162,7 +166,7 @@ const HighlightsNav: React.FC = () => {
                 </div>
               </a>
               {item.sections && (
-                <NavDropdown sections={item.sections} dropdownImage={item.dropdownImage} />
+                <HighlightsDropdown sections={item.sections} dropdownImage={item.dropdownImage} />
               )}
             </li>
           ))}

@@ -6,3 +6,5 @@ export { default as CancelIcon } from './CancelIcon';
 export { default as MinusIcon } from './MinusIcon';
 export { default as PlusIcon } from './PlusIcon';
 export { default as BulletPointIcon } from './BulletPointIcon';
+export { default as DiamondIcon } from './DiamondIcon';
+export { default as AnimationTransportIcon } from './AnimationTransportIcon';

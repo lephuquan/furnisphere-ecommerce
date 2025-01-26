@@ -885,16 +885,20 @@ const navItems: NavItem[] = [
   },
 ];
 
-const CategoryNav = () => {
+interface CategoryNavProps {
+  className?: string;
+}
+
+const CategoryNav: React.FC<CategoryNavProps> = ({ className }) => {
   return (
-    <nav className="relative bg-[#222]">
+    <nav className={`relative bg-[#222] ${className}`}>
       <div className="container mx-auto">
-        <ul className="flex justify-center">
+        <ul className="flex flex-wrap justify-center">
           {navItems.map((item) => (
             <li key={item.label} className="group">
               <a
                 href={`/${item.label.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`}
-                className="block px-5 py-1"
+                className="block px-4 xl:px-6 py-1"
               >
                 <div
                   className={`border-b-2 border-transparent py-1 text-sm font-medium ${item.label === 'SALE' ? 'text-red-500' : 'text-white'} transition-colors duration-200 hover:border-white`}

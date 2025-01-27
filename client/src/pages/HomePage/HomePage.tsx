@@ -7,6 +7,7 @@ import DesignerCollection from '../../components/DesignerCollection';
 import ShopBedroomFuniture from '../../components/ShopBedroomFuniture';
 import ShopStoreFuniture from '../../components/ShopStoreFuniture';
 import LordIconComponent from '../../components/LordIconComponent';
+import DinnerCollections from '../../components/DinnerCollections';
 
 export default function HomePage() {
   return (
@@ -24,6 +25,8 @@ export default function HomePage() {
       <ShopBedroomFuniture />
 
       <ShopStoreFuniture />
+      
+      <DinnerCollections/>
 
       {/* <LordIconComponent /> */}
 

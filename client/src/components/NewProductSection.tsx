@@ -29,11 +29,13 @@ const products = [
 const NewProductSection = () => {
   return (
     <>
+      {/* Mobile banner */}
       <img
         className="block w-full md:hidden"
         src="https://assets.pbimgs.com/pbimgs/rk/images/dp/ecm/202452/1821/001/034.png"
         alt=""
       />
+      {/* PC banner */}
       <img
         className="hidden h-[5rem] w-full md:block"
         src="https://assets.pbimgs.com/pbimgs/rk/images/dp/ecm/202452/3147/001/004.png"
@@ -43,7 +45,7 @@ const NewProductSection = () => {
         {products.map((product, index) => (
           <div
             key={index}
-            className="mr-2 flex h-[90%] w-[17rem]  shrink-0 flex-col items-center sm:w-[19rem] md:h-full md:w-52 lg:w-[18rem] xl:w-[22rem] 2xl:w-[26rem]"
+            className="mr-2 flex h-[90%] w-[17rem] shrink-0 flex-col items-center sm:w-[19rem] md:h-full md:w-52 lg:w-[18rem] xl:w-[22rem] 2xl:w-[26rem]"
           >
             <img className="h-full w-full" src={product.src} alt={product.title} />
             <p className="mt-2 font-helvetica text-base font-bold">

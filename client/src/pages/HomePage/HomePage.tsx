@@ -8,6 +8,7 @@ import ShopBedroomFuniture from '../../components/ShopBedroomFuniture';
 import ShopStoreFuniture from '../../components/ShopStoreFuniture';
 import LordIconComponent from '../../components/LordIconComponent';
 import DinnerCollections from '../../components/DinnerCollections';
+import BathStoreSection from '../../components/BathStoreSection';
 
 export default function HomePage() {
   return (
@@ -25,11 +26,12 @@ export default function HomePage() {
       <ShopBedroomFuniture />
 
       <ShopStoreFuniture />
-      
-      <DinnerCollections/>
+
+      <DinnerCollections />
+
+      <BathStoreSection />
 
       {/* <LordIconComponent /> */}
-
     </div>
   );
 }

@@ -9,6 +9,7 @@ import ShopStoreFuniture from '../../components/ShopStoreFuniture';
 import LordIconComponent from '../../components/LordIconComponent';
 import DinnerCollections from '../../components/DinnerCollections';
 import BathStoreSection from '../../components/BathStoreSection';
+import PotteryBarn from '../../components/PotteryBarn';
 
 export default function HomePage() {
   return (
@@ -31,7 +32,10 @@ export default function HomePage() {
 
       <BathStoreSection />
 
+      <PotteryBarn />
+
       {/* <LordIconComponent /> */}
     </div>
+
   );
 }

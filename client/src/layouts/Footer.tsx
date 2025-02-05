@@ -3,6 +3,11 @@ import { FiBox } from 'react-icons/fi';
 import { BsChatLeftDots } from 'react-icons/bs';
 import { FaRegCreditCard } from 'react-icons/fa6';
 import { FaApple } from 'react-icons/fa6';
+import { FaInstagramSquare } from 'react-icons/fa';
+import { FaTiktok } from 'react-icons/fa';
+import { FaYoutube } from 'react-icons/fa';
+import { FaFacebookF } from 'react-icons/fa';
+import { FaPinterestP } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -145,7 +150,7 @@ const Footer: React.FC = () => {
       )}
 
       {/* Order and payment */}
-      <div className="mt-5 flex w-full justify-center">
+      <div className="mb-10 mt-5 flex w-full justify-center">
         <div className="flex w-[80%] flex-col items-center justify-center space-y-10 md:w-[90%] md:flex-row md:flex-wrap md:items-end md:space-y-0 md:space-y-5 xl:w-[95%]">
           <div className="flex flex-col items-center justify-center space-y-2 md:h-[10rem] md:w-1/2 md:items-start md:justify-start xl:h-[12rem] xl:w-1/4">
             <div className="flex flex-col items-center justify-center space-y-2 md:flex-row md:space-x-2 md:space-y-0">
@@ -172,7 +177,7 @@ const Footer: React.FC = () => {
                 (312) 779-1979
               </a>
             </div>
-            <div className="xl:flex-col-2 text-md flex flex-row space-x-5 underline xl:flex-wrap xl:space-x-0">
+            <div className="xl:flex-col-2 flex flex-row space-x-3 text-[0.95rem] underline xl:flex-wrap xl:space-x-0 xl:text-base">
               <span className="xl:w-1/2">Chat With Us</span>
               <span className="xl:w-1/2">Leave Feedback</span>
               <span className="xl:w-1/2">Find a Store</span>
@@ -234,6 +239,108 @@ const Footer: React.FC = () => {
                 <div className="flex flex-col items-center justify-center">
                   <span className="text-xs">Download on the</span>
                   <span className="font-bold">App Store</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Help Resources */}
+      <div className="flex w-full flex-col items-center justify-center">
+        <div className="xl:border-gray-DEFAULT flex w-[90%] flex-col items-center justify-center sm:w-[75%] xl:w-[95%] xl:flex-row xl:items-start xl:border-t-2">
+          <div className="justify-censter border-gray-DEFAULT flex w-full flex-col items-start space-y-2 border-t-2 py-4 font-helvetica xl:w-1/4 xl:border-none">
+            <span className="font-bold">Help</span>
+            <div className="flex w-full flex-row items-start text-gray-neutral xl:flex-col">
+              <div className="flex w-1/2 flex-col space-y-1 text-sm">
+                <span className="">Customer Service</span>
+                <span className="">Return Policy</span>
+                <span className="">Product Recalls</span>
+                <span className="">Sign Up for Texts</span>
+              </div>
+              <div className="flex w-1/2 flex-col space-y-2 text-sm">
+                <span className="">Account</span>
+                <span className="">Shipping Information</span>
+                <span className="">Email & Text Preferences</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="justify-censter border-gray-DEFAULT flex w-full flex-col items-start space-y-2 border-t-2 py-4 font-helvetica xl:w-1/4 xl:border-none">
+            <span className="font-bold">Resources</span>
+            <div className="flex w-full flex-row items-start text-gray-neutral xl:flex-col">
+              <div className="flex w-1/2 flex-col space-y-1 text-sm">
+                <span className="">Free Design Services</span>
+                <span className="">Baby Registry</span>
+                <span className="">Catalogs</span>
+                <span className="">Contract Grade Furniture</span>
+              </div>
+              <div className="flex w-1/2 flex-col space-y-2 text-sm">
+                <span className="">Wedding Registry</span>
+                <span className="">Gift Cards</span>
+                <span className="">Trade Program</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="justify-censter border-gray-DEFAULT flex w-full flex-col items-start space-y-2 border-t-2 py-4 font-helvetica xl:w-1/4 xl:border-none">
+            <span className="font-bold">Our Company</span>
+            <div className="flex w-full flex-row items-start text-gray-neutral xl:flex-col">
+              <div className="flex w-1/2 flex-col space-y-1 text-sm">
+                <span className="">About Us</span>
+                <span className="">Responsible Design</span>
+              </div>
+              <div className="flex w-1/2 flex-col space-y-2 text-sm">
+                <span className="">Careers</span>
+                <span className="">Accessibility Statement</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex w-full flex-col items-center justify-center md:flex-row xl:w-1/4 xl:flex-col">
+            <div className="justify-censter border-gray-DEFAULT flex w-full flex-col items-start space-y-2 border-t-2 py-4 font-helvetica md:h-[12rem] xl:h-[10rem] xl:border-none">
+              <span className="font-bold">Show us your look with:</span>
+              <div className="flex w-full flex-col items-start space-y-5 text-gray-neutral">
+                <div className="flex w-1/2 flex-row space-x-3 text-sm">
+                  <span className="underline">#FurniStyle</span>
+                  <span className="underline">#FurniKidsStyle</span>
+                </div>
+                <div className="flex w-1/2 flex-row space-x-4 text-sm text-dark">
+                  <a href="#">
+                    <FaInstagramSquare className="size-5" />
+                  </a>
+                  <a href="#">
+                    <FaTiktok className="size-5" />
+                  </a>
+                  <a href="#">
+                    <FaPinterestP className="size-5" />
+                  </a>
+                  <a href="#">
+                    <FaYoutube className="size-5" />
+                  </a>
+                  <a href="#">
+                    <FaFacebookF className="size-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="justify-censter border-gray-DEFAULT flex w-full flex-col items-start space-y-2 border-t-2 py-4 font-helvetica md:h-[12rem] xl:h-[12rem] xl:border-none">
+              <span className="font-bold">Our Brands</span>
+              <div className="flex w-full flex-col items-start space-y-5 text-dark">
+                <div className="flex w-1/2 flex-row space-x-2 text-2xl font-bold xl:flex-col xl:items-start xl:space-x-0">
+                  <span>Furni&Sphere</span>
+                  <span>Furni&kids</span>
+                </div>
+
+                <div className="flex w-1/2 flex-row space-x-4 text-sm text-dark">
+                  <div className="border-2 border-dark px-[0.5rem] py-[0.2rem]">
+                    <span className="text-xl font-bold">CB2</span>
+                  </div>
+                  <div className="flex items-center text-lg font-semibold">
+                    <span className="pr-2">HUDSON</span>
+                    <div className="h-[80%] w-[2px] bg-dark"></div>
+                    <span className="pl-2">GRACE</span>
+                  </div>
                 </div>
               </div>
             </div>

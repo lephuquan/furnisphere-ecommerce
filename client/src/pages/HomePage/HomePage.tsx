@@ -9,10 +9,11 @@ import ShopStoreFuniture from '../../components/ShopStoreFuniture';
 import LordIconComponent from '../../components/LordIconComponent';
 import DinnerCollections from '../../components/DinnerCollections';
 import BathStoreSection from '../../components/BathStoreSection';
+import PotteryBarn from '../../components/PotteryBarn';
 
 export default function HomePage() {
   return (
-    <div className="mb-[50rem] flex min-h-screen w-full flex-col items-center space-y-4 bg-gray-100 md:pt-5 lg:pt-1">
+    <div className="flex min-h-screen w-full flex-col items-center space-y-4 bg-gray-100 md:pt-5 lg:pt-1">
       <PromotionalSection />
 
       <IntroducingSection />
@@ -31,7 +32,10 @@ export default function HomePage() {
 
       <BathStoreSection />
 
+      <PotteryBarn />
+
       {/* <LordIconComponent /> */}
     </div>
+
   );
 }

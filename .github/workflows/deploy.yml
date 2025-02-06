@@ -1,0 +1,54 @@
+name: Deploy Admin & Client
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-client:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (Client)
+        run: npm install --prefix client
+
+      - name: Build Client
+        run: npm run build:client
+
+      - name: Deploy Client to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./client/build
+
+  build-admin:
+    runs-on: ubuntu-latest
+    needs: build-client   # Chờ job Client hoàn thành
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (Admin)
+        run: npm install --prefix admin
+
+      - name: Build Admin
+        run: npm run build:admin
+
+      - name: Deploy Admin to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./admin/build

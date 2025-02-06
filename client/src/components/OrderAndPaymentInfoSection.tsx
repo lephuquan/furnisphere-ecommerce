@@ -16,7 +16,7 @@ export default function OrderAndPaymentInfoSection() {
           <span className="text-center md:text-left">
             Find out when your purchase will arrive or schedule a delivery.
           </span>
-          <div className="flex flex-row items-center justify-center space-x-4 underline">
+          <div className="flex flex-row items-center text-sm justify-center space-x-4 underline">
             <span>Track Order</span>
             <span>Schedule Delivery</span>
           </div>
@@ -33,10 +33,11 @@ export default function OrderAndPaymentInfoSection() {
               (312) 779-1979
             </a>
           </div>
-          <div className="xl:flex-col-2 flex flex-row space-x-3 text-[0.95rem] underline xl:flex-wrap xl:space-x-0 xl:text-base">
+          <div className="xl:flex-col-2 text-sm flex flex-row space-x-3 text-[0.95rem] underline xl:flex-wrap xl:space-x-0 xl:text-base">
             <span className="xl:w-1/2">Chat With Us</span>
             <span className="xl:w-1/2">Leave Feedback</span>
             <span className="xl:w-1/2">Find a Store</span>
+
           </div>
         </div>
 
@@ -50,7 +51,7 @@ export default function OrderAndPaymentInfoSection() {
             Earn Reward Dollars every time you shop* (excluding special financing purchases), plus
             get access to special offers and events.
           </span>
-          <div className="flex flex-row items-center justify-center space-x-4 underline">
+          <div className="flex flex-row items-center text-sm justify-center space-x-4 underline">
             <span>Apply Now</span>
             <span>Manage Your Account</span>
           </div>

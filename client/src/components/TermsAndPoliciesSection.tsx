@@ -4,7 +4,7 @@ export default function TermsAndPoliciesSection() {
   return (
     <div className="mt-5 flex w-full flex-col items-center justify-center md:mt-3">
       <div className="border-gray-DEFAULT w-[90%] border-t-2 pt-5 sm:w-[75%] xl:w-[95%]">
-        <div className="mb-4 grid grid-cols-2 items-baseline space-y-2 text-sm text-gray-neutral underline md:flex md:flex-row md:flex-wrap md:gap-2">
+        <div className="mb-2 grid grid-cols-2 items-baseline space-y-2 text-sm text-gray-neutral underline md:flex md:flex-row md:flex-wrap md:gap-x-4">
           <span>Terms of use</span>
           <span>Privacy</span>
           <span>Site Index</span>

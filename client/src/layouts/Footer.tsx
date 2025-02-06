@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="mb-10 mt-5">
+    <footer className="mb-5 mt-5">
       {/* History */}
       <div className="mb-[2rem] flex w-full flex-col items-center">
         {/* footer section 1 */}
@@ -122,9 +122,10 @@ const Footer: React.FC = () => {
       {/* Back to top Desktop */}
       {isVisible && (
         <div
-          className="group fixed bottom-4 hidden h-[4rem] w-[4rem] transform flex-col items-center justify-center rounded-full border border-black bg-[#f0efed] p-3 text-white shadow-lg transition-all duration-300 hover:scale-110 md:flex"
+          className="group fixed bottom-4 right-4 hidden h-[5vw] w-[5vw] transform flex-col items-center justify-center rounded-full  bg-[#f0efed] p-3 text-white shadow-xl transition-all duration-300 hover:scale-110 md:flex"
           onClick={scrollToTop}
           onMouseEnter={() => setIsHovered(true)}
+
           onMouseLeave={() => setIsHovered(false)}
         >
           <svg
@@ -298,7 +299,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="flex w-full flex-col items-center justify-center md:flex-row xl:w-1/4 xl:flex-col">
-            <div className="justify-censter border-gray-DEFAULT flex w-full flex-col items-start space-y-2 border-t-2 py-4 font-helvetica md:h-[12rem] xl:h-[10rem] xl:border-none">
+            <div className="justify-censter border-gray-DEFAULT flex w-full flex-col items-start space-y-2 border-t-2 py-4 font-helvetica md:h-[10rem] xl:h-[10rem] xl:border-none">
               <span className="font-bold">Show us your look with:</span>
               <div className="flex w-full flex-col items-start space-y-5 text-gray-neutral">
                 <div className="flex w-1/2 flex-row space-x-3 text-sm">
@@ -324,7 +325,7 @@ const Footer: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="justify-censter border-gray-DEFAULT flex w-full flex-col items-start space-y-2 border-t-2 py-4 font-helvetica md:h-[12rem] xl:h-[12rem] xl:border-none">
+            <div className="justify-censter border-gray-DEFAULT flex w-full flex-col items-start space-y-2 border-t-2 py-4 font-helvetica md:h-[10rem] xl:h-[12rem] xl:border-none">
               <span className="font-bold">Our Brands</span>
               <div className="flex w-full flex-col items-start space-y-5 text-dark">
                 <div className="flex w-1/2 flex-row space-x-2 text-2xl font-bold xl:flex-col xl:items-start xl:space-x-0">
@@ -344,6 +345,30 @@ const Footer: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Terms and Policies */}
+      <div className="mt-5 flex w-full flex-col items-center justify-center md:mt-3">
+        <div className="border-gray-DEFAULT w-[90%] border-t-2 pt-5 sm:w-[75%] xl:w-[95%]">
+
+          <div className="mb-4 grid grid-cols-2 items-baseline space-y-2 text-sm text-gray-neutral underline md:flex md:flex-row md:flex-wrap md:gap-2">
+            <span>Terms of use</span>
+            <span>Privacy</span>
+            <span>Site Index</span>
+            <span>Ad Choices</span>
+            <span>Cookie Settings</span>
+            <span>CA Supply Chains Act</span>
+            <span>Do Not Sell or Share My Personal Information</span>
+            <span>*Credit Card Tems</span>
+          </div>
+          <span className="text-sm text-gray-neutral">
+            © 2025 All rights reserved. If you are using a screen reader and are having problems
+            using this website, please call (000) 000-0000 for assistance.
+          </span>
+          <div className="flex items-center justify-center">
+            <p className="my-4 text-base font-bold">SALE 10% OFF FULL PRICE ITEMS*</p>
           </div>
         </div>
       </div>

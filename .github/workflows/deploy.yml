@@ -1,54 +1,48 @@
-name: Deploy Admin & Client
+name: Deploy Admin and Client to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main  # Chạy khi có push lên nhánh main
 
 jobs:
-  build-client:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: ⬇️ Checkout source code
+      uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+    - name: ⚙️ Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Chọn phiên bản Node phù hợp
+        cache: 'npm'
 
-      - name: Install dependencies (Client)
-        run: npm install --prefix client
+    - name: 📦 Install dependencies
+      run: npm install
 
-      - name: Build Client
-        run: npm run build:client
+    - name: 🚀 Build Admin
+      run: |
+        cd admin
+        npm install
+        npm run build
 
-      - name: Deploy Client to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./client/build
+    - name: 🚀 Build Client
+      run: |
+        cd client
+        npm install
+        npm run build
 
-  build-admin:
-    runs-on: ubuntu-latest
-    needs: build-client   # Chờ job Client hoàn thành
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: 📤 Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./client/dist  # Deploy client trước
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Install dependencies (Admin)
-        run: npm install --prefix admin
-
-      - name: Build Admin
-        run: npm run build:admin
-
-      - name: Deploy Admin to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./admin/build
+    - name: 📤 Deploy Admin to GitHub Pages (subfolder)
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./admin/dist  # Deploy admin lên subfolder /admin
+        destination_dir: admin    # Đặt admin ở đường dẫn /admin

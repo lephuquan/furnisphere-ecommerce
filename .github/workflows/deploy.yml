@@ -16,8 +16,7 @@ jobs:
     - name: ⚙️ Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'  # Chọn phiên bản Node phù hợp
-        cache: 'npm'
+        node-version: '18'
 
     - name: 📦 Install dependencies
       run: npm install

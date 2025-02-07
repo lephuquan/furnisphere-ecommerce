@@ -3,7 +3,7 @@ name: Deploy Admin and Client to GitHub Pages
 on:
   push:
     branches:
-      - main  # Chạy khi có push lên nhánh main
+      - main
 
 jobs:
   build-and-deploy:
@@ -37,11 +37,12 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./client/dist  # Deploy client trước
+        publish_dir: ./client/dist
+        destination_dir: .  # Đảm bảo deploy vào thư mục gốc
 
     - name: 📤 Deploy Admin to GitHub Pages (subfolder)
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./admin/dist  # Deploy admin lên subfolder /admin
-        destination_dir: admin    # Đặt admin ở đường dẫn /admin
+        publish_dir: ./admin/dist
+        destination_dir: admin  # Đảm bảo deploy vào thư mục /admin

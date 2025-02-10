@@ -34,18 +34,16 @@ jobs:
         npm install
         npm run build
 
-    - name: 📤 Deploy to GitHub Pages
+    - name: 📤 Deploy Client to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./client/dist
-        # destination_dir: .  # Đảm bảo deploy vào thư mục gốc - xử lý vấn đề mặc định dẫn đến Readme.md
-        destination_dir: develop/client  # Deploy vào thư mục /develop/client
+        destination_dir: ./develop/client  # Deploy vào thư mục /develop/client
 
     - name: 📤 Deploy Admin to GitHub Pages (subfolder)
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./admin/dist
-        # destination_dir: admin  # Đảm bảo deploy vào thư mục /admin
-        destination_dir: develop/admin  # Deploy vào thư mục /develop/client
+        destination_dir: ./develop/admin  # Deploy vào thư mục /develop/admin

@@ -9,6 +9,6 @@ export default defineConfig(({ mode }) => {
     server: {
       port: 3000,
     },
-    base: env.VITE_BASE_URL, // Sử dụng biến môi trường
+    base: process.env.VITE_BASE_URL || '/', // Sử dụng biến môi trường
   };
 });

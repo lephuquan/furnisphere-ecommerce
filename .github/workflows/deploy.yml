@@ -38,7 +38,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./client/dist
-        destination_dir: .  # Đảm bảo deploy vào thư mục gốc - xử lý vấn đề mặc định dẫn đến Readme.md
+        destination_dir: .client  # Đảm bảo deploy vào thư mục gốc - xử lý vấn đề mặc định dẫn đến Readme.md
 
     - name: 📤 Deploy Admin to GitHub Pages (subfolder)
       uses: peaceiris/actions-gh-pages@v3

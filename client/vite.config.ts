@@ -3,12 +3,12 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
-  
+
   return {
     plugins: [react()],
+    base: env.VITE_BASE_URL || '/',  // Đúng chuẩn
     server: {
       port: 3000,
     },
-    base: process.env.VITE_BASE_URL || '/', // Sử dụng biến môi trường
   };
 });

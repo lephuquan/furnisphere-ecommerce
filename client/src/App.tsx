@@ -7,12 +7,11 @@ import Footer from './layouts/Footer';
 
 function App() {
   return (
-    // basename help correctly locate resources and routes when deploying applications to environments
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename={import.meta.env.VITE_BASE_URL}>
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* other routes */}
+        {/* Các route khác */}
       </Routes>
       <Footer />
     </BrowserRouter>

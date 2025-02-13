@@ -88,7 +88,7 @@ const Sidebar: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="w-full px-5 py-4 bg-gray-200 border-y border-gray-400 lg:hidden">
+      <div className="w-full px-5 py-2 bg-gray-200 border-y border-gray-400 lg:hidden">
         <div className="relative">
           <input
             type="text"

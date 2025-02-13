@@ -9,3 +9,4 @@ export { default as BulletPointIcon } from './BulletPointIcon';
 export { default as DiamondIcon } from './DiamondIcon';
 export { default as AnimationTransportIcon } from './AnimationTransportIcon';
 export { default as RightArrow } from './RightArrow';
+export { default as HeartIcon } from './HeartIcon';
